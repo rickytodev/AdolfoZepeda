@@ -144,7 +144,7 @@ body {
 }
 .section_projects .port_mask .maskk {
   width: 100%;
-  background-color: rgba(117, 116, 116, 0.5568627451);
+  background-color: rgba(236, 234, 234, 0.5568627451);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -205,4 +205,68 @@ body {
 }
 .techs .lenguajes .i_cons {
   width: 100%;
+}
+
+.about_me {
+  margin-top: 40px;
+  display: flex;
+  padding: 60px 20px;
+}
+.about_me .about-me_left {
+  padding: 10px;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.about_me .about-me_left img {
+  margin-right: 10%;
+  width: 35%;
+  border-radius: 50%;
+}
+.about_me .about-me_right {
+  padding: 10px;
+  flex-basis: 50%;
+}
+.about_me .about-me_right h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.about_me .about-me_right ul {
+  list-style: none;
+}
+.about_me .about-me_right ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.about_me .about-me_right ul li i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+.footer {
+  background-color: #18181b;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+.footer .footer_left {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+}
+.footer .footer_left p {
+  border-right: 1px solid white;
+  margin-right: 10px;
+  padding-right: 5px;
+}
+.footer .footer_right {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer_right a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */

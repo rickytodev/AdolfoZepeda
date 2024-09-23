@@ -31,15 +31,15 @@ body {
         border-radius: 5px;
         position: fixed;
         z-index: 10000;
-      
-       background-color: rgba(255, 255, 255, 0.767);
+
+        background-color: rgba(255, 255, 255, 0.767);
 
         ul {
             list-style: none;
             display: flex;
             justify-content: space-between;
             padding: 10px 30px;
-           
+
 
             li {
                 a {
@@ -177,7 +177,7 @@ body {
 
         .maskk {
             width: 100%;
-            background-color: #7574748e;
+            background-color: #eceaea8e;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -261,5 +261,88 @@ body {
         .i_cons {
             width: 100%;
         }
+    }
+}
+
+.about_me {
+    margin-top: 40px;
+    display: flex;
+    padding: 60px 20px;
+
+    .about-me_left {
+        padding: 10px;
+
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+            margin-right: 10%;
+            width: 35%;
+            border-radius: 50%;
+        }
+    }
+
+    .about-me_right {
+        padding: 10px;
+
+        flex-basis: 50%;
+
+        h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                i {
+                    font-size: 20px;
+                    margin-right: 15px;
+                }
+
+                a {}
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #18181b;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px 0;
+
+    .footer_left {
+        display: flex;
+   
+        width: 30%;
+        justify-content: center;
+
+        p {
+            border-right: 1px solid white;
+            margin-right: 10px;
+            padding-right: 5px;
+        }
+    }
+
+    .footer_right {
+    
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
     }
 }
