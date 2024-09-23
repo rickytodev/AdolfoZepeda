@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  -white-: #ffffff;
+}
+
+body {
+  background-color: var(-white-);
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.header .navbar {
+  margin-top: 20px;
+  position: absolute;
+  border: 1px solid rgba(131, 129, 129, 0.438);
+  box-shadow: 2px 2px 3px 1px rgba(131, 129, 129, 0.438);
+  width: 35%;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.767);
+}
+.header .navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+.header .navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: all 200ms ease;
+}
+.header .navbar ul li a:hover {
+  background-color: rgba(65, 65, 65, 0.1215686275);
+}
+.header .header-main {
+  padding: 160px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+}
+.header .header-main .header-main_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header-main .header-main_left img {
+  border-radius: 50%;
+  width: 50%;
+}
+.header .header-main .header-main_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-basis: 50%;
+}
+.header .header-main .header-main_right span {
+  margin-bottom: 20px;
+}
+.header .header-main .header-main_right span a {
+  text-decoration: none;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.877);
+  color: white;
+  display: inline;
+  padding: 7px 27px;
+  border-radius: 7px;
+}
+.header .header-main .header-main_right span a i {
+  font-size: 25px;
+  margin-left: 10px;
+  color: white;
+}
+.header .header-main .header-main_right h1 {
+  font-size: 50px;
+  font-weight: 200;
+}
+.header .header-main_bottom {
+  position: absolute;
+  bottom: 25px;
+}
+.header .header-main_bottom p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -210%;
+  top: 50%;
+  width: 200%;
+  height: 2px;
+  border-radius: 10spx;
+  background-color: rgba(65, 65, 65, 0.5568627451);
+  z-index: -1;
+}
+.header .header-main_bottom P::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  width: 200%;
+  height: 2px;
+  border-radius: 10spx;
+  background-color: rgba(65, 65, 65, 0.5568627451);
+  z-index: -1;
+}
+
+.section_projects {
+  padding: 150px 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.section_projects .port_mask {
+  width: 35%;
+  border-radius: 10px;
+  transition: all 300ms ease;
+  position: relative;
+  cursor: pointer;
+}
+.section_projects .port_mask img {
+  width: 100%;
+  transition: all 500ms ease;
+  border-radius: 10px;
+}
+.section_projects .port_mask .maskk {
+  width: 100%;
+  background-color: rgba(117, 116, 116, 0.5568627451);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 90px;
+  position: absolute;
+  z-index: -1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all 300ms ease;
+}
+.section_projects .port_mask .maskk i {
+  font-size: 35px;
+}
+.section_projects .port_mask:first-child {
+  margin-bottom: 100px;
+}
+.section_projects .port_mask:nth-child(2) {
+  margin-bottom: 100px;
+}
+.section_projects .port_mask:hover .maskk {
+  transform: translateY(-50px);
+}
+
+.techs {
+  padding: 100px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.techs div {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.techs div h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.techs div i {
+  font-size: 50px;
+  color: black;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.techs div i:hover {
+  color: rgb(126, 204, 230);
+}
+.techs div .i_cons {
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
+}
+.techs div .i_cons:nth-child(2) {
+  justify-content: space-evenly;
+}
+.techs .lenguajes .i_cons {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
