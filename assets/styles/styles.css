@@ -25,16 +25,15 @@ body {
   border: 1px solid rgba(131, 129, 129, 0.438);
   box-shadow: 2px 2px 3px 1px rgba(131, 129, 129, 0.438);
   width: 35%;
-  border-radius: 5px;
+  border-radius: 10px;
   position: fixed;
   z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.767);
+  background-color: rgba(255, 255, 255, 0.568);
 }
 .header .navbar ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding: 10px 30px;
 }
 .header .navbar ul li a {
   text-decoration: none;
@@ -44,8 +43,65 @@ body {
   border-radius: 3px;
   transition: all 200ms ease;
 }
-.header .navbar ul li a:hover {
-  background-color: rgba(65, 65, 65, 0.1215686275);
+.header .navbar ul li:hover a {
+  color: white;
+}
+.header .navbar ul li {
+  width: 19%;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .navbar ul li:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.header .navbar ul li:active {
+  color: #0a0a0a;
+}
+.header .navbar ul li:active:after {
+  background: transparent;
+}
+.header .navbar ul li:hover:before {
+  opacity: 1;
+}
+.header .navbar ul li:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: all 300ms ease;
+}
+.header .navbar ul a {
+  color: white;
+}
+.header .navbar li:hover:after {
+  background-color: rgba(24, 24, 27, 0.9803921569);
+  color: white;
 }
 .header .header-main {
   padding: 160px 0px;
@@ -62,12 +118,15 @@ body {
 .header .header-main .header-main_left img {
   border-radius: 50%;
   width: 50%;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.575);
+  pointer-events: none;
 }
 .header .header-main .header-main_right {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-basis: 50%;
+  display: inline;
 }
 .header .header-main .header-main_right span {
   margin-bottom: 20px;
@@ -83,11 +142,19 @@ body {
   display: inline;
   padding: 7px 27px;
   border-radius: 7px;
+  transition: all 300ms ease;
 }
 .header .header-main .header-main_right span a i {
   font-size: 25px;
   margin-left: 10px;
   color: white;
+}
+.header .header-main .header-main_right span a:hover {
+  background-color: rgb(126, 204, 230);
+  color: black;
+}
+.header .header-main .header-main_right span a:hover i {
+  color: black;
 }
 .header .header-main .header-main_right h1 {
   font-size: 50px;
@@ -223,6 +290,7 @@ body {
   margin-right: 10%;
   width: 35%;
   border-radius: 50%;
+  pointer-events: none;
 }
 .about_me .about-me_right {
   padding: 10px;
@@ -239,11 +307,16 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  transition: all 300ms ease;
 }
 .about_me .about-me_right ul li i {
   font-size: 20px;
   margin-right: 15px;
 }
+.about_me .about-me_right ul li:hover {
+  color: rgb(126, 204, 230);
+}
+
 .footer {
   background-color: #18181b;
   color: white;
@@ -255,11 +328,17 @@ body {
   display: flex;
   width: 30%;
   justify-content: center;
+  align-items: center;
 }
 .footer .footer_left p {
   border-right: 1px solid white;
   margin-right: 10px;
   padding-right: 5px;
+}
+.footer .footer_left a {
+  color: white;
+  text-decoration: none;
+  font-size: 10px;
 }
 .footer .footer_right {
   width: 20%;
@@ -269,4 +348,33 @@ body {
 .footer .footer_right a {
   text-decoration: none;
   color: white;
+  transition: all 300ms ease;
+}
+.footer .footer_right a:hover {
+  border-bottom: 1px solid white;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/*animation on scroll with js*/
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%);
+  transition: all 300ms ease;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }/*# sourceMappingURL=styles.css.map */
