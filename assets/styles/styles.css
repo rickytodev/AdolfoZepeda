@@ -489,7 +489,7 @@ body {
     display: inline;
   }
   .section_projects {
-    padding: 185px 70px;
+    padding: 185px 10px;
     display: flex;
     flex-direction: column;
   }
@@ -548,6 +548,11 @@ body {
     border-radius: 10spx;
     background-color: rgba(65, 65, 65, 0.5568627451);
     z-index: -1;
+  }
+  .section_projects {
+    padding: 185px 10px;
+    display: flex;
+    flex-direction: column;
   }
   .section_projects .port_mask {
     width: 100%;
@@ -653,7 +658,7 @@ body {
     cursor: pointer;
   }
   .section_projects {
-    padding: 185px 30px;
+    padding: 185px 5px;
     display: flex;
     flex-direction: column;
   }

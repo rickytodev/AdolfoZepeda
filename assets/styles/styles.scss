@@ -615,7 +615,7 @@ body {
     }
 
     .section_projects {
-        padding: 185px 70px;
+        padding: 185px 10px;
         display: flex;
         flex-direction: column;
     }
@@ -682,6 +682,12 @@ body {
         border-radius: 10spx;
         background-color: rgba(65, 65, 65, 0.5568627451);
         z-index: -1;
+    }
+
+    .section_projects {
+        padding: 185px 10px;
+        display: flex;
+        flex-direction: column;
     }
 
     .section_projects .port_mask {
@@ -805,7 +811,7 @@ body {
     }
 
     .section_projects {
-        padding: 185px 30px;
+        padding: 185px 5px;
         display: flex;
         flex-direction: column;
     }
@@ -816,6 +822,7 @@ body {
         cursor: pointer;
         transition: all 300ms ease;
     }
+
     .footer {
         background-color: #18181b;
         color: white;
@@ -825,12 +832,14 @@ body {
         justify-content: center;
         padding: 30px 15px;
     }
+
     .footer .footer_left {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
     }
+
     .footer .footer_right {
         width: 100%;
         display: flex;
