@@ -31,3 +31,12 @@ document.getElementById('switch').addEventListener('change', () => {
         document.body.classList.add('white');
     }
 });
+
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+// Agregar evento de clic al hamburguesa
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show'); // Alterna la clase 'show' en el menú
+});
+

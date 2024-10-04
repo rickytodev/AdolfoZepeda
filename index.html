@@ -26,36 +26,29 @@
 <body>
 
     <header class="header" id="main">
-        <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="#main">Main</a>
-                </li>
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#me">About</a>
-                </li>
-                <li>
-                    <a href="#techs">Resources</a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/adolfin07/" target="_blank">Contact</a>
-                </li>
-            </ul>
-           
-            <label class="switch-button" for="switch">
-              <div class="switch-outer">
-                <input id="switch" type="checkbox">
-                <div class="button">
-                  <span class="button-toggle"></span>
-                  <span class="button-indicator"></span>
+        <nav class="navbar" id="navbar">
+
+            <div class="nav-content">
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
-              </div>
-            </label>
+                <nav class="nav" id="nav">
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="#main">Main</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#me">About</a></li>
+                        <li><a href="#techs">Resources</a></li>
+                        <li><a href="https://www.instagram.com/adolfin07/" target="_blank">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
             
+
+
         </nav>
+
         <div class="header-main">
             <div class="header-main_left hidden">
                 <img src="https://github.com/adolfin07.png" alt="icon-me">
@@ -180,6 +173,13 @@
         </div>
     </footer>
 
+
+    <div class="toggle-switch">
+        <label class="switch-label" id="switch">
+            <input type="checkbox" class="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
 </body>
 
 </html>
