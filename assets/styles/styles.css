@@ -10,7 +10,7 @@
 }
 
 body {
-  background: rgb(212, 212, 212);
+  background: #141414;
 }
 
 .header {
@@ -28,7 +28,7 @@ body {
   border-radius: 10px;
   position: fixed;
   z-index: 10000;
-  background-color: rgba(255, 255, 255, 0.568);
+  background-color: rgba(245, 245, 245, 0.712);
 }
 .header .navbar ul {
   list-style: none;
@@ -99,6 +99,74 @@ body {
 .header .navbar ul a {
   color: white;
 }
+.header .navbar .switch-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  margin: auto;
+  height: 55px;
+}
+.header .navbar .switch-button {
+  position: absolute;
+  top: 0;
+  right: -90%;
+  margin-right: 20px;
+}
+.header .navbar .switch-button .switch-outer {
+  height: 100%;
+  background: #252532;
+  width: 115px;
+  border-radius: 165px;
+  box-shadow: inset 0px 5px 10px 0px #16151c, 0px 3px 6px -2px #403f4e;
+  border: 1px solid #32303e;
+  padding: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.header .navbar .switch-button .switch-outer input[type=checkbox] {
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+.header .navbar .switch-button .switch-outer .button-toggle {
+  height: 42px;
+  width: 42px;
+  background: linear-gradient(#3b3a4e, #272733);
+  border-radius: 100%;
+  box-shadow: inset 0px 5px 4px 0px #424151, 0px 4px 15px 0px #0f0e17;
+  position: relative;
+  z-index: 2;
+  transition: left 0.3s ease-in;
+  left: 0;
+}
+.header .navbar .switch-button .switch-outer input[type=checkbox]:checked + .button .button-toggle {
+  left: 58%;
+}
+.header .navbar .switch-button .switch-outer input[type=checkbox]:checked + .button .button-indicator {
+  animation: indicator 1s forwards;
+}
+.header .navbar .switch-button .switch-outer .button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.header .navbar .switch-button .switch-outer .button-indicator {
+  height: 25px;
+  width: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 3px solid #ef565f;
+  box-sizing: border-box;
+  right: 10px;
+  position: relative;
+}
 .header .navbar li:hover:after {
   background-color: rgba(24, 24, 27, 0.9803921569);
   color: white;
@@ -117,7 +185,7 @@ body {
 }
 .header .header-main .header-main_left img {
   border-radius: 50%;
-  width: 50%;
+  width: 60%;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.575);
   pointer-events: none;
 }
@@ -159,10 +227,17 @@ body {
 .header .header-main .header-main_right h1 {
   font-size: 50px;
   font-weight: 200;
+  color: whitesmoke;
 }
 .header .header-main_bottom {
   position: absolute;
   bottom: 25px;
+}
+.header .header-main_bottom p {
+  color: whitesmoke;
+}
+.header .header-main_bottom p i {
+  color: whitesmoke;
 }
 .header .header-main_bottom p::before {
   content: "";
@@ -173,7 +248,7 @@ body {
   width: 200%;
   height: 2px;
   border-radius: 10spx;
-  background-color: rgba(65, 65, 65, 0.5568627451);
+  background-color: whitesmoke;
   z-index: -1;
 }
 .header .header-main_bottom P::after {
@@ -185,7 +260,7 @@ body {
   width: 200%;
   height: 2px;
   border-radius: 10spx;
-  background-color: rgba(65, 65, 65, 0.5568627451);
+  background-color: whitesmoke;
   z-index: -1;
 }
 
@@ -252,10 +327,11 @@ body {
 .techs div h3 {
   font-size: 30px;
   margin-bottom: 10px;
+  color: rgba(126, 204, 230, 0.767);
 }
 .techs div i {
   font-size: 50px;
-  color: black;
+  color: whitesmoke;
   cursor: pointer;
   transition: all 300ms ease;
 }
@@ -299,6 +375,8 @@ body {
 .about_me .about-me_right h2 {
   font-size: 35px;
   margin-bottom: 20px;
+  color: whitesmoke;
+  pointer-events: none;
 }
 .about_me .about-me_right ul {
   list-style: none;
@@ -308,6 +386,8 @@ body {
   align-items: center;
   margin-bottom: 10px;
   transition: all 300ms ease;
+  color: whitesmoke;
+  pointer-events: none;
 }
 .about_me .about-me_right ul li i {
   font-size: 20px;
@@ -334,6 +414,7 @@ body {
   border-right: 1px solid white;
   margin-right: 10px;
   padding-right: 5px;
+  pointer-events: none;
 }
 .footer .footer_left a {
   color: white;
@@ -365,6 +446,19 @@ body {
     background-position: 0 0;
   }
 }
+@keyframes indicator {
+  30% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    border: 3px solid #60d480;
+    left: -68%;
+  }
+}
 /*animation on scroll with js*/
 .hidden {
   opacity: 0;
@@ -377,6 +471,74 @@ body {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+/*toggle button*/
+.white {
+  background-color: white;
+}
+.white .header .header-main .header-main_right h1 {
+  font-size: 50px;
+  font-weight: 200;
+  color: rgb(17, 17, 17);
+}
+.white .header .header-main_bottom p {
+  color: rgb(17, 17, 17);
+}
+.white .header .header-main_bottom p i {
+  color: rgb(17, 17, 17);
+}
+.white .header .header-main_bottom p::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -210%;
+  top: 50%;
+  width: 200%;
+  height: 2px;
+  border-radius: 10spx;
+  background-color: rgb(17, 17, 17);
+  z-index: -1;
+}
+.white .header .header-main_bottom P::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  width: 200%;
+  height: 2px;
+  border-radius: 10spx;
+  background-color: rgb(17, 17, 17);
+  z-index: -1;
+}
+.white .about_me .about-me_right h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: rgb(17, 17, 17);
+  pointer-events: none;
+}
+.white .about_me .about-me_right ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all 300ms ease;
+  color: rgb(17, 17, 17);
+  pointer-events: none;
+}
+.white .techs div h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: rgb(17, 17, 17);
+}
+.white .techs div i {
+  font-size: 50px;
+  color: rgb(17, 17, 17);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.white .techs div i:hover {
+  color: rgb(126, 204, 230);
 }
 
 /*responsive*/
@@ -455,6 +617,12 @@ body {
     color: white;
     transition: all 300ms ease;
     font-size: 10px;
+  }
+  .header .navbar .switch-button {
+    position: absolute;
+    top: 0;
+    right: -35%;
+    margin-right: 20px;
   }
 }
 @media (max-width: 768px) {

@@ -22,3 +22,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+document.getElementById('switch').addEventListener('change', () => {
+    if (document.body.classList.contains('white')) {
+        document.body.classList.remove('white');
+    } else {
+        document.body.classList.add('white');
+    }
+});
