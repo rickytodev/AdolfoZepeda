@@ -1,0 +1,236 @@
+// importa las fuentes de google para usar dentro de la pagina
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+//MARK: Variables
+
+:root {
+  --background: #141414;
+  --hover: #161616;
+  --color: white;
+  --border: solid 1px rgb(26, 26, 26);
+  --shadow: 0px 3px 10px #272727;
+}
+
+//MARK: Estilos Globales
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--color);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-items: center;
+}
+
+//MARK: Menu
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 20px;
+  width: 100%;
+  max-width: 1220px;
+  height: 60px;
+  border: var(--border);
+  backdrop-filter: blur(30px);
+  padding: 0px 12px 0px 20px;
+  border-radius: 6px;
+  z-index: 100;
+
+  & nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+
+    & a {
+      text-decoration: none;
+      color: var(--color);
+      font-size: 15px;
+    }
+  }
+
+  & button {
+    width: 40px;
+    height: 40px;
+    color: var(--color);
+    border: var(--border);
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+
+    & i {
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: var(--hover);
+    }
+  }
+}
+
+//MARK: Información
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+
+  & .divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 1px;
+    background-color: var(--color);
+    margin-bottom: 60px;
+    scroll-margin-top: 120px;
+
+    & p {
+      position: absolute;
+      top: -28px;
+      padding: 0px 20px;
+      background-color: var(--background);
+    }
+  }
+
+  & #init-info {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    & img {
+      width: 300px;
+      border-radius: 100%;
+      box-shadow: var(--shadow);
+    }
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 20px;
+
+      & button {
+        padding: 12px 25px;
+        color: var(--color);
+        border: var(--border);
+        background: transparent;
+        cursor: pointer;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 20px;
+
+        &:hover {
+          background-color: var(--hover);
+        }
+      }
+
+      & h1 {
+        font-size: 50px;
+        margin: 0;
+        font-style: italic;
+        font-weight: 500;
+      }
+    }
+  }
+
+  & #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    gap: 50px;
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      height: 300px;
+
+      & article {
+        width: 250px;
+        margin-left: 15px;
+        height: 45px;
+        min-height: 45px;
+        border: var(--border);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        cursor: default;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        font-size: 25px;
+        padding: 0px 0px 0px 15px;
+        background-color: var(--hover);
+
+        & img {
+          height: 55%;
+        }
+      }
+
+      & a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          box-shadow: var(--shadow);
+        }
+
+        & span {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.678);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 25px;
+          opacity: 0;
+          transition: all 0.5s ease;
+        }
+
+        &:hover {
+          & span {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
